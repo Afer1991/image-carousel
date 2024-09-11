@@ -3,44 +3,54 @@ const prevBtn = document.getElementById("previous");
 const nextBtn = document.getElementById("next");
 
 const next = () => {
-  const img = slide.src;
+  const id = slide.dataset.id;
 
-  switch(img) {
-    case "file:///home/af1991/repos/image-carousel/images/image1.jpeg":
+  switch(id) {
+    case "1":
+      slide.dataset.id = "2";
       slide.src = "images/image2.jpeg";
       break;
-    case "file:///home/af1991/repos/image-carousel/images/image2.jpeg":
+    case "2":
+      slide.dataset.id = "3";
       slide.src = "images/image3.jpeg";
       break;
-    case "file:///home/af1991/repos/image-carousel/images/image3.jpeg":
+    case "3":
+      slide.dataset.id = "4";
       slide.src = "images/image4.jpeg";
       break;
-    case "file:///home/af1991/repos/image-carousel/images/image4.jpeg":
+    case "4":
+      slide.dataset.id = "5";
       slide.src = "images/image5.jpeg";
       break;
-    case "file:///home/af1991/repos/image-carousel/images/image5.jpeg":
+    case "5":
+      slide.dataset.id = "1";
       slide.src = "images/image1.jpeg";
       break;
   }
 };
 
 const previous = () => {
-  const img = slide.src;
+ const id = slide.dataset.id;
 
-  switch(img) {
-    case "file:///home/af1991/repos/image-carousel/images/image1.jpeg":
+  switch(id) {
+    case "1":
+      slide.dataset.id = "5";
       slide.src = "images/image5.jpeg";
       break;
-    case "file:///home/af1991/repos/image-carousel/images/image2.jpeg":
+    case "2":
+      slide.dataset.id = "1";
       slide.src = "images/image1.jpeg";
       break;
-    case "file:///home/af1991/repos/image-carousel/images/image3.jpeg":
+    case "3":
+      slide.dataset.id = "2";
       slide.src = "images/image2.jpeg";
       break;
-    case "file:///home/af1991/repos/image-carousel/images/image4.jpeg":
+    case "4":
+      slide.dataset.id = "3";
       slide.src = "images/image3.jpeg";
       break;
-    case "file:///home/af1991/repos/image-carousel/images/image5.jpeg":
+    case "5":
+      slide.dataset.id = "4";
       slide.src = "images/image4.jpeg";
       break;
   }
