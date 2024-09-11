@@ -138,3 +138,5 @@ btnFive.addEventListener("click", () => {
 
   btnFive.classList.add("current");
 });
+
+setInterval(next, 5000);
