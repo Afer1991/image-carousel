@@ -81,5 +81,60 @@ const previous = () => {
   }
 };
 
+const removeCurrent = () => {
+  const btns = document.querySelector(".buttons").childNodes;
+
+  for (i = 1; i < btns.length; i += 2) {
+    if (btns[i].classList == "button current") {
+      btns[i].classList.remove("current");
+    }
+  };
+};
+
 prevBtn.addEventListener("click", previous);
 nextBtn.addEventListener("click", next);
+
+btnOne.addEventListener("click", () => {
+  slide.dataset.id = "1";
+  slide.src = "images/image1.jpeg";
+
+  removeCurrent();
+
+  btnOne.classList.add("current");
+});
+
+btnTwo.addEventListener("click", () => {
+  slide.dataset.id = "2";
+  slide.src = "images/image2.jpeg";
+
+  removeCurrent();
+
+  btnTwo.classList.add("current");
+});
+
+btnThree.addEventListener("click", () => {
+  slide.dataset.id = "3";
+  slide.src = "images/image3.jpeg";
+
+  removeCurrent();
+
+  btnThree.classList.add("current");
+});
+
+btnFour.addEventListener("click", () => {
+  slide.dataset.id = "4";
+  slide.src = "images/image4.jpeg";
+
+  removeCurrent();
+
+  btnFour.classList.add("current");
+});
+
+btnFive.addEventListener("click", () => {
+  slide.dataset.id = "5";
+  slide.src = "images/image5.jpeg";
+
+  removeCurrent();
+
+  btnFive.classList.add("current");
+});
