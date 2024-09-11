@@ -16,7 +16,7 @@ body {
   height: 65%;
 }
 
-.container {
+.container, img {
   height: 100%;
   width: 100%;
 }
@@ -30,17 +30,31 @@ body {
   justify-content: space-between;
 }
 
-.left, .right {
-  border: 1px solid black;
+#previous, #next {
   width: 7.5%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+#previous:hover, #next:hover {
+  background: #000;
+  transition: 1s;
+}
+
+#previous:hover {
+  border-radius: 0 5px 5px 0;
+}
+
+#next:hover {
+  border-radius: 5px 0 0 5px;
 }
 
 i {
   font-size: 1.75rem;
+  color: #FFF;
 }
 
 .buttons {
